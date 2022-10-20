@@ -5,7 +5,7 @@ const Tour = require('./../../models/tourModel');
 const User = require('./../../models/userModel');
 const Review = require('./../../models/reviewModel');
 
-const DB = process.env.DATABASE_URL.replace('<PASSWORD>', process.env.PASSWORD);
+const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.PASSWORD);
 
 mongoose.connect(DB, { useNewUrlParser: true }).then((con) => {
   console.log('DB connection successful!');

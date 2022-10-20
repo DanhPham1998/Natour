@@ -10,7 +10,7 @@ process.on('uncaughtException', (err) => {
 });
 
 const app = require('./app');
-const DB = process.env.DATABASE_URL.replace('<PASSWORD>', process.env.PASSWORD);
+const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.PASSWORD);
 
 mongoose.connect(DB, { useNewUrlParser: true }).then((con) => {
   console.log('DB connection successful!');
