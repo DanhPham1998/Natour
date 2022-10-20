@@ -8,7 +8,7 @@
     "start:prod": "NODE_ENV=production nodemon sever.js",
     "debug": "ndb sever.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url .",
-    "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url ."
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js --public-url ."
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "@stripe/stripe-js": "^1.42.0",
     "axios": "^1.1.2",
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
     "cross-env": "^7.0.3",
     "dotenv": "^16.0.2",

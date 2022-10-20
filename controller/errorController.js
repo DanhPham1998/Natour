@@ -19,7 +19,7 @@ const handleDuplicateFieldsDB = (err) => {
 const handleValidationErrorDB = (err) => {
   const arrayError = Object.values(err.errors).map((item) => item.message);
 
-  console.log(err.errors);
+  // console.log(err.errors);
   const message = `Invalid iput data. ${arrayError.join('. ')}`;
   return new AppError(message, 400);
 };
@@ -113,7 +113,7 @@ module.exports = (err, req, res, next) => {
     if (error.name === 'TokenExpiredError') {
       error = handleJWTExpiredError();
     }
-    console.log(err.message);
+    // console.log(err.message);
     sendErrorProd(error, req, res);
   }
 };

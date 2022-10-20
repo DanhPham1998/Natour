@@ -93,7 +93,7 @@ reviewSchema.post('save', function () {
 reviewSchema.pre(/^findOneAnd/, async function (next) {
   // Lưu dữ liệu để truyền xuống phần post khi đữ liệu đã đươc cập nhật để xử lý, nhiệm vụ hàm này chỉ là lấy id review, id tour
   this.r = await this.findOne().clone(); // Clone docment để tránh bị lỗi
-  console.log(this.r);
+  // console.log(this.r);
   next();
 });
 
