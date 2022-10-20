@@ -17,6 +17,7 @@ const bookingRouter = require('./routes/bookingRoutes');
 
 const helmet = require('helmet');
 
+// Start express app
 const app = express();
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
